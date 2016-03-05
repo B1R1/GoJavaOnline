@@ -1,9 +1,11 @@
-package module_3_4;
+package module_3_4.files;
 
 public class File {
 
     private String name;
     private int size;
+
+    // getters & setters
 
     public String getName() {
         return name;

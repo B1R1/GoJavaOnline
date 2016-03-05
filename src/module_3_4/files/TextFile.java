@@ -1,6 +1,8 @@
-package module_3_4;
+package module_3_4.files;
 
-public class AudioFile extends File {
+import module_3_4.files.File;
+
+public class TextFile extends File {
 
     @Override
     public String getName() {
@@ -17,7 +19,7 @@ public class AudioFile extends File {
         super.setName(name);
     }
 
-    public void play() {
+    public void read() {
 
     }
 

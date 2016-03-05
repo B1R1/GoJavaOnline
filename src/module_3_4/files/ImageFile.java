@@ -1,6 +1,8 @@
-package module_3_4;
+package module_3_4.files;
 
-public class TextFile extends File {
+import module_3_4.files.File;
+
+public class ImageFile extends File {
 
     @Override
     public String getName() {
@@ -17,7 +19,7 @@ public class TextFile extends File {
         super.setName(name);
     }
 
-    public void read() {
+    public void show() {
 
     }
 
