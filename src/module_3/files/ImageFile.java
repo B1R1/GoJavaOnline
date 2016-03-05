@@ -1,6 +1,6 @@
-package module_3_4.files;
+package module_3.files;
 
-public class AudioFile extends File {
+public class ImageFile extends File {
 
     @Override
     public String getName() {
@@ -17,7 +17,7 @@ public class AudioFile extends File {
         super.setName(name);
     }
 
-    public void play() {
+    public void show() {
 
     }
 

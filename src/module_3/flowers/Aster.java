@@ -1,6 +1,6 @@
-package module_3_4.flowers;
+package module_3.flowers;
 
-public class Rose extends Flower {
+public class Aster extends Flower {
 
     @Override
     public String bloom() {

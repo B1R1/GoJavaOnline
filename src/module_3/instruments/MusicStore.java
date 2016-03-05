@@ -1,4 +1,4 @@
-package module_3_4.instruments;
+package module_3.instruments;
 
 import java.util.List;
 

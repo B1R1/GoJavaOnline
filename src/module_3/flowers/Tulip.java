@@ -1,4 +1,4 @@
-package module_3_4.flowers;
+package module_3.flowers;
 
 public class Tulip extends Flower {
 

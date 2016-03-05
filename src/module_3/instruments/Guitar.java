@@ -1,6 +1,6 @@
-package module_3_4.instruments;
+package module_3.instruments;
 
-public class Trumpet extends MusicalInstrument {
+public class Guitar extends MusicalInstrument {
 
     @Override
     public String sounds() {

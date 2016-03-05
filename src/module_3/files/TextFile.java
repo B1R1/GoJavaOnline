@@ -1,6 +1,4 @@
-package module_3_4.files;
-
-import module_3_4.files.File;
+package module_3.files;
 
 public class TextFile extends File {
 
