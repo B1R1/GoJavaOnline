@@ -1,34 +1,47 @@
 package module_3.flowers;
 
 public class Aster extends Flower {
+    private String color;
+    private String smellOfFlower;
+
+    // constructors
+
+    public Aster() {
+    }
+
+    public Aster(String color, String smellOfFlower) {
+        this.color = color;
+        this.smellOfFlower = smellOfFlower;
+    }
+
+
+    // methods
 
     @Override
     public String bloom() {
-        return super.bloom();
+        return "Aster is blooming.";
     }
 
     @Override
     public String smell() {
-        return super.smell();
+        return "Aster is smelling.";
     }
 
-    @Override
+    // getters & setters
+
     public String getColor() {
-        return super.getColor();
+        return color;
     }
 
-    @Override
-    public String getSmellOfFlower() {
-        return super.getSmellOfFlower();
-    }
-
-    @Override
     public void setColor(String color) {
-        super.setColor(color);
+        this.color = color;
     }
 
-    @Override
+    public String getSmellOfFlower() {
+        return smellOfFlower;
+    }
+
     public void setSmellOfFlower(String smellOfFlower) {
-        super.setSmellOfFlower(smellOfFlower);
+        this.smellOfFlower = smellOfFlower;
     }
 }

@@ -1,34 +1,45 @@
 package module_3.flowers;
 
 public class Tulip extends Flower {
+    private String color;
+    private String smellOfFlower;
+
+    // constructors
+
+    public Tulip() {
+    }
+
+    public Tulip(String color, String smellOfFlower) {
+        this.color = color;
+        this.smellOfFlower = smellOfFlower;
+    }
+
+    // methods
 
     @Override
     public String bloom() {
-        return super.bloom();
+        return "Tulip is blooming.";
     }
 
     @Override
     public String smell() {
-        return super.smell();
+        return "Tulip is smelling.";
     }
+    // getters & setters
 
-    @Override
     public String getColor() {
-        return super.getColor();
+        return color;
     }
 
-    @Override
-    public String getSmellOfFlower() {
-        return super.getSmellOfFlower();
-    }
-
-    @Override
     public void setColor(String color) {
-        super.setColor(color);
+        this.color = color;
     }
 
-    @Override
+    public String getSmellOfFlower() {
+        return smellOfFlower;
+    }
+
     public void setSmellOfFlower(String smellOfFlower) {
-        super.setSmellOfFlower(smellOfFlower);
+        this.smellOfFlower = smellOfFlower;
     }
 }

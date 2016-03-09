@@ -1,25 +1,10 @@
 package module_3.files;
 
-public class File {
+public abstract class File {
 
-    private String name;
-    private int size;
+    public abstract void edit();
 
-    // getters & setters
+    public abstract void download();
 
-    public String getName() {
-        return name;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
+    public abstract void delete();
 }

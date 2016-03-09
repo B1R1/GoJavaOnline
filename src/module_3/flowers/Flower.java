@@ -1,32 +1,8 @@
 package module_3.flowers;
 
-public class Flower {
-    private String color;
-    private String smellOfFlower;
+public abstract class Flower {
 
-    public String bloom()  {
-        return "Flower is blooming.";
-    }
+    public abstract String bloom();
 
-    public String smell()  {
-        return "Flower is smelling.";
-    }
-
-    // getters & setters
-
-    public String getColor() {
-        return color;
-    }
-
-    public String getSmellOfFlower() {
-        return smellOfFlower;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setSmellOfFlower(String smellOfFlower) {
-        this.smellOfFlower = smellOfFlower;
-    }
+    public abstract String smell();
 }

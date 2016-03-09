@@ -2,33 +2,21 @@ package module_3.files;
 
 public class ImageFile extends File {
 
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public int getSize() {
-        return super.getSize();
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
     public void show() {
 
     }
 
+    @Override
     public void edit() {
 
     }
 
+    @Override
     public void download() {
 
     }
 
+    @Override
     public void delete() {
 
     }

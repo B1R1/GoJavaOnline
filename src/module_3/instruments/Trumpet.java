@@ -2,28 +2,29 @@ package module_3.instruments;
 
 public class Trumpet extends MusicalInstrument {
 
+
+    private String ownerName;
+    private String typeOfInstrument;
+
     @Override
     public String sounds() {
-        return super.sounds();
+        return "Trumpet sounds good.";
     }
 
-    @Override
+    // getters & setters
     public String getOwnerName() {
-        return super.getOwnerName();
+        return ownerName;
     }
 
-    @Override
-    public String getTypeOfInstrument() {
-        return super.getTypeOfInstrument();
-    }
-
-    @Override
     public void setOwnerName(String ownerName) {
-        super.setOwnerName(ownerName);
+        this.ownerName = ownerName;
     }
 
-    @Override
+    public String getTypeOfInstrument() {
+        return typeOfInstrument;
+    }
+
     public void setTypeOfInstrument(String typeOfInstrument) {
-        super.setTypeOfInstrument(typeOfInstrument);
+        this.typeOfInstrument = typeOfInstrument;
     }
 }
