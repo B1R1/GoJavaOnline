@@ -1,9 +1,9 @@
 package module_3.files;
 
-public class AudioFile extends File {
+public class AudioFile implements File {
 
-    public void play() {
-
+    public String play() {
+        return "Listen to AudioFile.";
     }
 
     @Override

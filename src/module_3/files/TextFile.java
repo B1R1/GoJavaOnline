@@ -1,9 +1,9 @@
 package module_3.files;
 
-public class TextFile extends File {
+public class TextFile implements File {
 
-    public void read() {
-
+    public String read() {
+        return "Read TextFile.";
     }
 
     @Override
@@ -20,4 +20,5 @@ public class TextFile extends File {
     public void delete() {
 
     }
+
 }

@@ -1,10 +1,10 @@
 package module_3.files;
 
-public abstract class File {
+public interface File {
 
-    public abstract void edit();
+    void edit();
 
-    public abstract void download();
+    void download();
 
-    public abstract void delete();
+    void delete();
 }

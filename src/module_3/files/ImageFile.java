@@ -1,9 +1,9 @@
 package module_3.files;
 
-public class ImageFile extends File {
+public class ImageFile implements File {
 
-    public void show() {
-
+    public String show() {
+        return "Watch ImageFile.";
     }
 
     @Override
