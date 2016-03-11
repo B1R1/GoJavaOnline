@@ -1,4 +1,4 @@
-package module_4.distanceBetweenTwoPoints;
+package module_4.distance_between_two_points;
 
 /*
  Домашнее задание к Модулю 4

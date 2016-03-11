@@ -1,4 +1,4 @@
-package module_4.temperatureConversion;
+package module_4.temperature_conversion;
 /**
  Домашнее задание к Модулю 4
  2. Создать класс преобразующий значение температуры по шкале Цельсия в значение по шкале Фаренгейта и в обратном направлении.

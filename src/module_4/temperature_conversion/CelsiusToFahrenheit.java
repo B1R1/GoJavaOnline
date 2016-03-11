@@ -1,4 +1,4 @@
-package module_4.temperatureConversion;
+package module_4.temperature_conversion;
 
 public class CelsiusToFahrenheit {
 
