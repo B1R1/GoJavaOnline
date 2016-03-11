@@ -1,4 +1,4 @@
-package module_4.distanceBetweenTwoPoints;
+package module_4.distance_between_two_points;
 
 /*
  Домашнее задание к Модулю 4
@@ -16,6 +16,4 @@ public class Main {
         double result = d.calculateDistance(pointFirst, pointSecond);
         System.out.println(result);
     }
-
-
 }

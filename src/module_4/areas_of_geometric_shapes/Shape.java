@@ -1,4 +1,4 @@
-package module_4.areasOfGeometricShapes;
+package module_4.areas_of_geometric_shapes;
 
 public interface Shape {
 

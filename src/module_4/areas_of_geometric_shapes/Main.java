@@ -1,4 +1,4 @@
-package module_4.areasOfGeometricShapes;
+package module_4.areas_of_geometric_shapes;
 /*
 Домашнее задание к Модулю 4.
 1. Создать класс, вычисляющий площадь простых геометрических фигур: треугольника, прямоугольника и круга.
