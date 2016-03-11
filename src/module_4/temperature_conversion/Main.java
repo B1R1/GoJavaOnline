@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TemperaturesData tData = new TemperaturesData(1, 12);
+        TemperaturesValue tData = new TemperaturesValue(1, 12);
 
         CelsiusToFahrenheit c = new CelsiusToFahrenheit();
         double result_1 = c.fromCelsiusToFahrenheit (tData);

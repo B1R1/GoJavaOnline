@@ -1,10 +1,10 @@
 package module_4.temperature_conversion;
 
-public class TemperaturesData {
+public class TemperaturesValue {
     private double fahrenheitValue;
     private double celsiusValue;
 
-    public TemperaturesData(double fahrenheitValue, double celsiusValue) {
+    public TemperaturesValue(double fahrenheitValue, double celsiusValue) {
         this.fahrenheitValue = fahrenheitValue;
         this.celsiusValue = celsiusValue;
     }
