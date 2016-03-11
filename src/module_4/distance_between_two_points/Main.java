@@ -16,6 +16,4 @@ public class Main {
         double result = d.calculateDistance(pointFirst, pointSecond);
         System.out.println(result);
     }
-
-
 }
