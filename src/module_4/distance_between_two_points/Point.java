@@ -10,8 +10,6 @@ public class Point {
         this.point_x2 = point_x2;
     }
 
-    // getters and setters
-
     public double getPoint_x1() {
         return point_x1;
     }

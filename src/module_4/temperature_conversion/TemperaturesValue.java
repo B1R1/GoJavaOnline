@@ -9,8 +9,6 @@ public class TemperaturesValue {
         this.celsiusValue = celsiusValue;
     }
 
-    // getters and setters
-
     public double getFahrenheitValue() {
         return fahrenheitValue;
     }
