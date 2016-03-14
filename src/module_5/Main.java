@@ -1,5 +1,4 @@
 package module_5;
-
 /**
  Домашнее задание к Модулю 5.
  Создать класс, который осуществляет поиск максимального и минимального элемента в массиве из целых чисел (int[]).
@@ -10,8 +9,8 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arrayOfIntegers = new int[arraySize];
-        System.out.print("Printing unsorted array: ");
-        // init array
+        System.out.print("Print unsorted array: ");
+
         for (int i = 0; i < arrayOfIntegers.length; i++) {
             int defaultValue = (int) (Math.random() * 50);
             arrayOfIntegers[i] = defaultValue;
@@ -19,21 +18,22 @@ public class Main {
         }
         System.out.println();
 
-        // find minimum and maximum
-        FindMaximumValue findMax = new FindMaximumValue();
-        String maximum = findMax.maximumValue(arrayOfIntegers);
+        MaximumArrayValue findMax = new MaximumArrayValue();
+        String maximum = findMax.findMaximumValue(arrayOfIntegers);
 
-        FindMinimumValue findMin = new FindMinimumValue();
-        String minimum  =findMin.minimumValue(arrayOfIntegers);
+        MinimumArrayValue findMin = new MinimumArrayValue();
+        String minimum = findMin.findMinimumValue(arrayOfIntegers);
 
         System.out.println(maximum);
         System.out.println(minimum);
 
-        // sort array
-        SortArray sort = new SortArray();
-        sort.sortArray(arrayOfIntegers);
-        System.out.print("Printing sorted array: ");
+        ArraySort insertSort = new InsertArraySort();
+        insertSort.sortArray(arrayOfIntegers);
 
+        ArraySort bubbleSort = new BubbleArraySort();
+        bubbleSort.sortArray(arrayOfIntegers);
+
+        System.out.print("Print sorted array: ");
         for (int arrayOfInteger : arrayOfIntegers) {
             System.out.print(arrayOfInteger + " ");
         }
