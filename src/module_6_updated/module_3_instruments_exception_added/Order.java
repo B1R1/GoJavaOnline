@@ -4,12 +4,12 @@ import java.util.Map;
 
 public class Order {
     static int pianoAmountInOrder = (int) (Math.random()*3);
-    static int guitarAmountInOrder = (int) (Math.random()*3);
+    static int guitarAmountInOrder = (int) (Math.random()*5);
     static int trumpetAmountInOrder = (int) (Math.random()*3);
 
     public void createOrder(Map<String, Integer> map) {
-        map.put("piano", pianoAmountInOrder);
-        map.put("guitar", guitarAmountInOrder);
-        map.put("trumpet", trumpetAmountInOrder);
+        map.put("Piano", pianoAmountInOrder);
+        map.put("Guitar", guitarAmountInOrder);
+        map.put("Trumpet", trumpetAmountInOrder);
     }
 }

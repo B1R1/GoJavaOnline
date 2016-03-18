@@ -4,7 +4,11 @@ public class Trumpet extends Instrument {
 
 
     private String ownerName;
-    private String typeOfInstrument;
+
+    @Override
+    public String getType() {
+        return null;
+    }
 
     @Override
     public String sounds() {
@@ -18,14 +22,6 @@ public class Trumpet extends Instrument {
 
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
-    }
-
-    public String getTypeOfInstrument() {
-        return typeOfInstrument;
-    }
-
-    public void setTypeOfInstrument(String typeOfInstrument) {
-        this.typeOfInstrument = typeOfInstrument;
     }
 
     @Override
