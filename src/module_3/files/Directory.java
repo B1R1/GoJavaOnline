@@ -3,13 +3,13 @@ package module_3.files;
 import java.util.List;
 
 public class Directory {
-    private List<File> list;
+    private List<File> files;
 
-    public List<File> getList() {
-        return list;
+    public List<File> getFiles() {
+        return files;
     }
 
-    public void setList(List<File> list) {
-        this.list = list;
+    public void setFiles(List<File> files) {
+        this.files = files;
     }
 }

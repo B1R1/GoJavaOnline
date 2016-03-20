@@ -3,21 +3,24 @@ package module_3.instruments;
 import java.util.List;
 
 public class MusicStore {
-    private List<MusicalInstrument> list;
+    private List<MusicalInstrument> instruments;
     private int priceOfItems;
 
-    // getters & setters
+    public MusicStore(final List<MusicalInstrument> instruments, final int priceOfItems) {
+        this.instruments = instruments;
+        this.priceOfItems = priceOfItems;
+    }
 
-    public List<MusicalInstrument> getList() {
-        return list;
+    public List<MusicalInstrument> getInstruments() {
+        return instruments;
     }
 
     public int getPriceOfItems() {
         return priceOfItems;
     }
 
-    public void setList(List<MusicalInstrument> list) {
-        this.list = list;
+    public void setInstruments(List<MusicalInstrument> instruments) {
+        this.instruments = instruments;
     }
 
     public void setPriceOfItems(int priceOfItems) {

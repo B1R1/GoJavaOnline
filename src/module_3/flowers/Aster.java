@@ -4,18 +4,10 @@ public class Aster extends Flower {
     private String color;
     private String smellOfFlower;
 
-    // constructors
-
-    public Aster() {
-    }
-
     public Aster(String color, String smellOfFlower) {
         this.color = color;
         this.smellOfFlower = smellOfFlower;
     }
-
-
-    // methods
 
     @Override
     public String bloom() {
@@ -26,8 +18,6 @@ public class Aster extends Flower {
     public String smell() {
         return "Aster is smelling.";
     }
-
-    // getters & setters
 
     public String getColor() {
         return color;

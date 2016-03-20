@@ -5,17 +5,10 @@ public class Diasy extends Flower {
     private String color;
     private String smellOfFlower;
 
-    // constructors
-
-    public Diasy() {
-    }
-
     public Diasy(String color, String smellOfFlower) {
         this.color = color;
         this.smellOfFlower = smellOfFlower;
     }
-
-    // methods
 
     @Override
     public String bloom() {
@@ -26,8 +19,6 @@ public class Diasy extends Flower {
     public String smell() {
         return "Diasy is smelling.";
     }
-
-    // getters & setters
 
     public String getColor() {
         return color;

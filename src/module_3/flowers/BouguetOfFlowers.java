@@ -3,18 +3,16 @@ package module_3.flowers;
 import java.util.List;
 
 public class BouguetOfFlowers {
-    private List<Flower> list;
+    private List<Flower> flowers;
 
-    // getters & setters
-
-    public List <Flower> getList ()
+    public List <Flower> getFlowers()
     {
-        return list;
+        return flowers;
     }
 
-    public void setList (List<Flower> list)
+    public void setFlowers(List<Flower> flowers)
     {
-        this.list = list;
+        this.flowers = flowers;
     }
 
 }

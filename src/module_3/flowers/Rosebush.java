@@ -3,15 +3,13 @@ package module_3.flowers;
 import java.util.List;
 
 public class Rosebush {
-    private List<Flower> list;
+    private List<Rose> roses;
 
-    // getters & setters
-
-    public List<Flower> getList() {
-        return list;
+    public List<Rose> getRoses() {
+        return roses;
     }
 
-    public void setList(List<Flower> list) {
-        this.list = list;
+    public void setRoses(List<Rose> roses) {
+        this.roses = roses;
     }
 }

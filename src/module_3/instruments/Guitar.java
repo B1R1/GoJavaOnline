@@ -5,12 +5,16 @@ public class Guitar extends MusicalInstrument {
     private String ownerName;
     private String typeOfInstrument;
 
+    public Guitar(final String ownerName, final String typeOfInstrument) {
+        this.ownerName = ownerName;
+        this.typeOfInstrument = typeOfInstrument;
+    }
+
     @Override
     public String sounds() {
         return "Guitar sounds good.";
     }
 
-    // getters & setters
     public String getOwnerName() {
         return ownerName;
     }
