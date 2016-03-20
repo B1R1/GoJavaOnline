@@ -2,12 +2,11 @@ package module_6_updated.module_3_instruments_exception_added;
 
 public class Trumpet extends Instrument {
 
-
     private String ownerName;
 
     @Override
     public String getType() {
-        return null;
+        return "Trumpet";
     }
 
     @Override
@@ -15,7 +14,6 @@ public class Trumpet extends Instrument {
         return "Trumpet sounds good.";
     }
 
-    // getters & setters
     public String getOwnerName() {
         return ownerName;
     }
