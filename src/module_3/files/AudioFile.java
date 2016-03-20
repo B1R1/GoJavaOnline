@@ -2,7 +2,7 @@ package module_3.files;
 
 public class AudioFile implements File {
 
-    public String play() {
+    @Override public String open() {
         return "Listen to AudioFile.";
     }
 

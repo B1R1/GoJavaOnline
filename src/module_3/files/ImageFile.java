@@ -6,6 +6,10 @@ public class ImageFile implements File {
         return "Watch ImageFile.";
     }
 
+    @Override public String open() {
+        return "Watch ImageFile.";
+    }
+
     @Override
     public void edit() {
 
