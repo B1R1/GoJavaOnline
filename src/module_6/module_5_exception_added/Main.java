@@ -1,12 +1,21 @@
-package module_5;
+package module_6.module_5_exception_added;
+
+import module_5.ArraySort;
+import module_5.BubbleSort;
+import module_5.InsertSort;
+import module_5.MaximumValue;
+import module_5.MinimumValue;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  Домашнее задание к Модулю 5.
  Создать класс, который осуществляет поиск максимального и минимального элемента в массиве из целых чисел (int[]).
  Выбрать один из алгоритмов сортировки массивов и реализовать его.
  */
 public class Main {
-
-    private static final int arraySize = 15;
 
     public static void main(String[] args) {
 
@@ -33,15 +42,35 @@ public class Main {
 
     private static int findMax(int[] arrayOfIntegers) {
         MaximumValue findMax = new MaximumValue();
-        return findMax.findMax(arrayOfIntegers);
+        int maximum = 0;
+        try {
+            maximum = findMax.findMax(arrayOfIntegers);
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Error: An array has been accessed with an illegal index.");
+        }
+        return maximum;
     }
 
     private static int findMin(int[] arrayOfIntegers) {
         MinimumValue findMin = new MinimumValue();
-        return findMin.findMinim(arrayOfIntegers);
+        int minimum = 0;
+        try {
+            minimum = findMin.findMinim(arrayOfIntegers);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: An array has been accessed with an illegal index.");
+        }
+        return minimum;
     }
 
     private static int[] fillArray() {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int arraySize = 0;
+        try {
+            arraySize = Integer.parseInt(reader.readLine());
+        } catch (IOException e) {
+            System.out.println("Error: Failed or interrupted I/O operations.");
+        }
+
         int[] arrayOfIntegers = new int[arraySize];
 
         for (int i = 0; i < arrayOfIntegers.length; i++) {
