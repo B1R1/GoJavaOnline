@@ -3,7 +3,7 @@ package module_6_updated.module_5_exception_added;
 public class BubbleArraySort implements ArraySort {
 
     @Override
-    public int[] sortArray(int[] array) {
+    public int[] sort(int[] array) {
         int temp;
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {

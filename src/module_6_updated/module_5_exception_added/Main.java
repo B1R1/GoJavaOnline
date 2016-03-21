@@ -10,7 +10,9 @@ import java.io.InputStreamReader;
  При этом использовать УЖЕ СУЩЕСТВУЮЩИЙ класс (например, IllegalStateException)
  */
 public class Main {
-    static int arraySize = 0;
+
+    private static int arraySize = 0;
+
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Please, print size of array: from 2 to 100.");
@@ -62,13 +64,14 @@ public class Main {
         System.out.println(minimum);
 
         ArraySort insertSort = new InsertArraySort();
-        insertSort.sortArray(arrayOfIntegers);
+
+        int[] sortedArray = insertSort.sort(arrayOfIntegers);
 
         ArraySort bubbleSort = new BubbleArraySort();
-        bubbleSort.sortArray(arrayOfIntegers);
+        bubbleSort.sort(arrayOfIntegers);
 
         System.out.print("Print sorted array: ");
-        for (int arrayOfInteger : arrayOfIntegers) {
+        for (int arrayOfInteger : sortedArray) {
             System.out.print(arrayOfInteger + " ");
 
         }

@@ -11,6 +11,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+        TemperaturesValue tData = getTemperaturesValue();
+
+        CelsiusToFahrenheit c = new CelsiusToFahrenheit();
+        double fahrenheitFromCel = c.fromCelsiusToFahrenheit (tData);
+
+        FahrenheitToCelsius f = new FahrenheitToCelsius();
+        double result_2 = f.fromFahrenheitToCelsius(tData);
+
+        System.out.println(fahrenheitFromCel);
+        System.out.println(result_2);
+    }
+
+    private static TemperaturesValue getTemperaturesValue() {
         int fahrenheitDegree = 0;
 
         try {
@@ -25,17 +38,6 @@ public class Main {
             System.out.println("Error: could not find the file.");
         }
 
-
-        TemperaturesValue tData = new TemperaturesValue(1, fahrenheitDegree);
-
-        CelsiusToFahrenheit c = new CelsiusToFahrenheit();
-        double result_1 = c.fromCelsiusToFahrenheit (tData);
-
-        FahrenheitToCelsius f = new FahrenheitToCelsius();
-        double result_2 = f.fromFahrenheitToCelsius(tData);
-
-
-        System.out.println(result_1);
-        System.out.println(result_2);
+        return new TemperaturesValue(1, fahrenheitDegree);
     }
 }

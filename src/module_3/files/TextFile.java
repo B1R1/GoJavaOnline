@@ -2,7 +2,8 @@ package module_3.files;
 
 public class TextFile implements File {
 
-    @Override public String open() {
+    @Override
+    public String open() {
         return "Read TextFile.";
     }
 

@@ -2,27 +2,27 @@ package module_4.distance_between_two_points;
 
 public class Point {
 
-    private double point_x1;
-    private double point_x2;
+    private double x;
+    private double y;
 
-    public Point(double point_x1, double point_x2) {
-        this.point_x1 = point_x1;
-        this.point_x2 = point_x2;
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public double getPoint_x1() {
-        return point_x1;
+    public double getX() {
+        return x;
     }
 
-    public void setPoint_x1(double point_x1) {
-        this.point_x1 = point_x1;
+    public void setX(double x) {
+        this.x = x;
     }
 
-    public double getPoint_x2() {
-        return point_x2;
+    public double getY() {
+        return y;
     }
 
-    public void setPoint_x2(double point_x2) {
-        this.point_x2 = point_x2;
+    public void setY(double y) {
+        this.y = y;
     }
 }

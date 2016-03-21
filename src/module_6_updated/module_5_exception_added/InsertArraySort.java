@@ -3,7 +3,7 @@ package module_6_updated.module_5_exception_added;
 public class InsertArraySort implements ArraySort {
 
     @Override
-    public int[] sortArray(int[] array) {
+    public int[] sort(int[] array) {
         int temp;
         int j;
         for (int i = 0; i < array.length; i++) {

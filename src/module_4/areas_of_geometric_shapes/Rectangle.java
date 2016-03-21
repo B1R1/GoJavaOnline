@@ -12,7 +12,6 @@ public class Rectangle implements Shape {
 
     @Override
     public double calculateArea() {
-        return rectangleWidth * rectangleHeight; //Насколько я помню полщадь прамоугольника это S = a*b
-    }                                                   //откуда тут еще умножение на 0,5 ?
-                                                // ИСПРАВИЛ, УБРАЛ 0.5
+        return rectangleWidth * rectangleHeight;
+    }
 }

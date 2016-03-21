@@ -30,6 +30,11 @@ public class Main {
         ArraySort insertSort = new InsertArraySort();
         insertSort.sortArray(arrayOfIntegers);
 
+        System.out.print("Print sorted array: ");
+        for (int arrayOfInteger : arrayOfIntegers) {
+            System.out.print(arrayOfInteger + " ");
+        }
+
         ArraySort bubbleSort = new BubbleArraySort();
         bubbleSort.sortArray(arrayOfIntegers);
 
