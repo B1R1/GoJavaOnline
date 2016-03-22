@@ -4,25 +4,27 @@ import module_6.geometric_shapes.*;
 
 import java.util.Map;
 
-public class MapPrinter {
-
-    void print(Map <Shape, Integer> map) {
-
+public class MapPrinter
+{
+    void print(Map <Shape, Integer> map)
+    {
         for (Map.Entry<Shape, Integer> pair : map.entrySet())
         {
-            if (pair.getKey() instanceof Circle)
+            Shape sh = pair.getKey();
+
+            if (sh instanceof Circle)
             {
-                System.out.println(pair.getKey() + " " + ((Circle) pair.getKey()).getRadius());
+                System.out.printf(sh + "%10.3s\n", ((Circle) sh).getRadius());
             }
-            else if (pair.getKey() instanceof Rectangle)
+            else if (sh instanceof Rectangle)
             {
-                System.out.println(pair.getKey() + " " + ((Rectangle) pair.getKey()).getHeight() +
-                        " " + ((Rectangle) pair.getKey()).getWidth());
+                System.out.printf(sh + "%7.3s%6.3s\n", ((Rectangle) sh).getHeight(),
+                        ((Rectangle) sh).getWidth());
             }
-            else if (pair.getKey() instanceof Triangle)
+            else if (sh instanceof Triangle)
             {
-                System.out.println(pair.getKey() + " " + ((Triangle) pair.getKey()).getHeight() +
-                        " " + ((Triangle) pair.getKey()).getBase());
+                System.out.printf(sh + "%8.3s%6.3s\n", ((Triangle) sh).getHeight(),
+                        ((Triangle) sh).getBase());
             }
         }
     }

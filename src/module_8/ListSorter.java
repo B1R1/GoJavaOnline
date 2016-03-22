@@ -4,10 +4,12 @@ import module_6.geometric_shapes.*;
 
 import java.util.List;
 
-public class ListSorter {
-
-    public List sort (List <Shape> list) throws NegativeValueException {
+public class ListSorter
+{
+    public List sort (List <Shape> list) throws NegativeValueException
+    {
         Shape temp;
+
         for (int i = list.size() - 1; i > 0; i--)
         {
             for (int j = 0; j < i; j++)

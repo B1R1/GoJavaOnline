@@ -16,17 +16,7 @@ public class CollectionsCreator {
         return list;
     }
 
-    public static  Map createMap(Map <Shape, Integer> map ) {
-        map.put(new Circle(2), 17);
-        map.put(new Triangle(2, 9), 6);
-        map.put(new Circle(2), 4);
-        map.put(new Circle(2), 90);
-        map.put(new Rectangle(5, 2), 89);
-
-        return map;
-    }
-
-    public static  Set createSet(Set <Circle> set) {
+    public static Set createSet(Set <Circle> set) {
         set.add(new Circle(2));
         set.add(new Circle(1));
         set.add(new Circle(4));
@@ -37,5 +27,13 @@ public class CollectionsCreator {
         return set;
     }
 
+    public static Map createMap(Map <Shape, Integer> map ) {
+        map.put(new Circle(2), 17);
+        map.put(new Triangle(2, 9), 6);
+        map.put(new Circle(2), 4);
+        map.put(new Circle(2), 90);
+        map.put(new Rectangle(5, 2), 89);
 
+        return map;
+    }
 }

@@ -13,10 +13,10 @@ import module_6.geometric_shapes.*;
 
 import java.util.*;
 
-public class Main {
-
-    public static void main(String[] args) throws NegativeValueException {
-
+public class Main
+{
+    public static void main(String[] args) throws NegativeValueException
+    {
         List<Shape> list = new ArrayList<>();
         CollectionsCreator.createList(list);
 
@@ -28,48 +28,46 @@ public class Main {
 
         ListPrinter printerList = getListPrinter(list);
 
-        getLisSortedAndPrinted(list, printerList); // сортирую ArrayList
+        getLisSorterAndPrinter(list, printerList); // сортирую ArrayList
 
         getSetPrinter(set);
 
         getMapPrinter(map);
     }
 
-    private static void getMapPrinter(Map<Shape, Integer> map) {
+    private static void getMapPrinter(Map<Shape, Integer> map)
+    {
         MapPrinter printerMap = new MapPrinter();
-
-        System.out.println("\nPrint map: \n");
-
+        print("\nPrint map: \n");
         printerMap.print(map);
     }
 
-    private static void getSetPrinter(Set<Circle> treeSet) {
+    private static void getSetPrinter(Set<Circle> treeSet)
+    {
         SetPrinter printerSet = new SetPrinter();
-
-        System.out.println("\nPrint treeSet: \n");
-
+        print("\nPrint treeSet: \n");
         printerSet.print(treeSet);
     }
 
-    private static void getLisSortedAndPrinted(List<Shape> list, ListPrinter printerList) throws NegativeValueException {
+    private static void getLisSorterAndPrinter(List<Shape> list, ListPrinter printerList) throws NegativeValueException
+    {
         ListSorter sorter = new ListSorter();
-
         sorter.sort(list);
-
-        System.out.println("\nPrint sorted list: \n");
-
+        print("\nPrint sorted list: \n");
         printerList.print(list);
     }
 
-    private static ListPrinter getListPrinter(List<Shape> list) {
+    private static ListPrinter getListPrinter(List<Shape> list)
+    {
         ListPrinter printerList = new ListPrinter();
-
-        System.out.println("Print list: \n");
-
+        print("Print list: \n");
         printerList.print(list);
-
         return printerList;
     }
 
+    public static void print(String s) {
+        System.out.println(s);
     }
+
+}
 

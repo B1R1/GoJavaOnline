@@ -6,23 +6,21 @@ import java.util.List;
 
 public class ListPrinter {
 
-    void print(List<Shape> list) {
-
-        for (int i = 0; i < list.size(); i++)
+    void print(List<Shape> list)
+    {
+        for (Shape i : list)
         {
-            if (((List) list).get(i) instanceof Circle)
+            if (i instanceof Circle)
             {
-                System.out.println(((List) list).get(i) + " " + ((Circle) ((List) list).get(i)).getRadius());
+                System.out.printf(i + "%10.4s\n", ((Circle) i).getRadius());
             }
-            else if (((List) list).get(i) instanceof Rectangle)
+            else if (i instanceof Rectangle)
             {
-                System.out.println(((List) list).get(i) + " " + ((Rectangle) ((List) list).get(i)).getHeight()
-                        + " " + ((Rectangle) ((List) list).get(i)).getWidth());
+                System.out.printf(i + "%7.4s%6.4s\n", ((Rectangle) i).getHeight(), ((Rectangle) i).getWidth());
             }
-            else if (((List) list).get(i) instanceof Triangle)
+            else if (i instanceof Triangle)
             {
-                System.out.println(((List) list).get(i) + " " + ((Triangle) ((List) list).get(i)).getHeight()
-                        + " " + ((Triangle) ((List) list).get(i)).getBase());
+                System.out.printf(i +"%8.4s%6.4s\n", ((Triangle) i).getHeight(), ((Triangle) i).getBase());
             }
         }
     }

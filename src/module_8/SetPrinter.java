@@ -5,16 +5,13 @@ import module_6.geometric_shapes.Circle;
 import java.util.Iterator;
 import java.util.Set;
 
-public class SetPrinter {
-
-    void print(Set<Circle> set) {
-
-        Iterator iterator = set.iterator();
-
-        while (iterator.hasNext())
+public class SetPrinter
+{
+    void print (Set <Circle> set)
+    {
+        for (Circle circle : set)
         {
-                System.out.println(iterator.next() + " "
-                        + ((Circle) iterator.next()).getRadius());
+            System.out.printf(circle + "%10.4s\n", circle.getRadius());
             }
         }
     }
