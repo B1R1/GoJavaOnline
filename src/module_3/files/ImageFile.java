@@ -2,10 +2,6 @@ package module_3.files;
 
 public class ImageFile implements File {
 
-    public String show() {
-        return "Watch ImageFile.";
-    }
-
     @Override
     public String open() {
         return "Watch ImageFile.";
