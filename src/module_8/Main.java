@@ -18,56 +18,56 @@ public class Main
     public static void main(String[] args) throws NegativeValueException
     {
         List<Shape> list = new ArrayList<>();
-        CollectionsCreator.createList(list);
+        Creator.createList(list);
 
         Map<Shape, Integer> map = new HashMap<>();
-        CollectionsCreator.createMap(map);
+        Creator.createMap(map);
 
-        Set<Circle> set = new TreeSet<>();
-        CollectionsCreator.createSet(set);
+        Set<Shape> set = new TreeSet<>();
+        Creator.createSet(set);
 
-        ListPrinter printerList = getListPrinter(list);
+        print(list);
 
-        getLisSorterAndPrinter(list, printerList); // сортирую ArrayList
+        print(set);
 
-        getSetPrinter(set);
+        printMap(map);
 
-        getMapPrinter(map);
+        bubbleSort(list);  // сортирую  List
+
+        print(list);
     }
 
-    private static void getMapPrinter(Map<Shape, Integer> map)
+    private static CollectionPrinter print(Collection<Shape> collection)
     {
-        MapPrinter printerMap = new MapPrinter();
-        print("\nPrint map: \n");
-        printerMap.print(map);
+        String collectionName = collection.getClass().getSimpleName();
+
+        CollectionPrinter printer = new CollectionPrinter();
+
+        System.out.println("\nPrint " + collectionName);
+
+        CollectionPrinter.print(collection);
+
+        return printer;
     }
 
-    private static void getSetPrinter(Set<Circle> treeSet)
+    private static MapPrinter printMap(Map<Shape, Integer> map)
     {
-        SetPrinter printerSet = new SetPrinter();
-        print("\nPrint treeSet: \n");
-        printerSet.print(treeSet);
+        MapPrinter printer = new MapPrinter();
+
+        System.out.println("\nPrint map ");
+
+        printer.print(map);
+
+        return printer;
     }
 
-    private static void getLisSorterAndPrinter(List<Shape> list, ListPrinter printerList) throws NegativeValueException
+    private static List bubbleSort(List<Shape> list) throws NegativeValueException
     {
-        ListSorter sorter = new ListSorter();
+        ListBubbleSort sorter = new ListBubbleSort();
+
         sorter.sort(list);
-        print("\nPrint sorted list: \n");
-        printerList.print(list);
-    }
 
-    private static ListPrinter getListPrinter(List<Shape> list)
-    {
-        ListPrinter printerList = new ListPrinter();
-        print("Print list: \n");
-        printerList.print(list);
-        return printerList;
+        return list;
     }
-
-    public static void print(String s) {
-        System.out.println(s);
-    }
-
 }
 

@@ -2,13 +2,13 @@ package module_8;
 
 import module_6.geometric_shapes.*;
 
-import java.util.List;
+import java.util.Collection;
 
-public class ListPrinter {
-
-    void print(List<Shape> list)
+public class CollectionPrinter
+{
+    public static void print(Collection<Shape> collection)
     {
-        for (Shape i : list)
+        for (Shape i : collection)
         {
             if (i instanceof Circle)
             {

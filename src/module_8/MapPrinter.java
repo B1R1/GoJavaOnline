@@ -25,7 +25,7 @@ public class MapPrinter
             {
                 System.out.printf(sh + "%8.3s%6.3s\n", ((Triangle) sh).getHeight(),
                         ((Triangle) sh).getBase());
+                }
             }
         }
     }
-}

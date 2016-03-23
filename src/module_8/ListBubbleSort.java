@@ -4,7 +4,7 @@ import module_6.geometric_shapes.*;
 
 import java.util.List;
 
-public class ListSorter
+public class ListBubbleSort
 {
     public List sort (List <Shape> list) throws NegativeValueException
     {
