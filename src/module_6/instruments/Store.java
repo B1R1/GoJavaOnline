@@ -2,58 +2,63 @@ package module_6.instruments;
 
 import java.util.*;
 
-public class Store {
+class Store {
 
-    static int pianoAmount = 2;
-    static int guitarAmount = 16;
-    static int trumpetAmount = 7;
+    private static final int PIANOS = 3;
+    private static final int GUITARS = 3;
+    private static final int TRUMPETS = 3;
 
-    static List<Instrument> instruments = new ArrayList<>();
+    private static final List<Instrument> store = new ArrayList<>();
 
-    public List<Instrument> fillListOfInstruments() {
-
-        for (int i = 0; i < pianoAmount; i++) {
-            instruments.add(new Piano());
-        }
-
-        for (int i = 0; i < guitarAmount; i++) {
-            instruments.add(new Guitar());
-        }
-
-        for (int i = 0; i < trumpetAmount; i++) {
-            instruments.add(new Trumpet());
-
-        }
-        return instruments;
+    public Store() {
+        fillStore();
     }
 
-    public List<Instrument> prepareInstruments(Map<String, Integer> order) {
+    public void manage (Map <Instrument, List<Instrument>> map) {
+        for (Map.Entry<Instrument, List<Instrument>> order : map.entrySet()) {
 
-        for (Map.Entry<String, Integer> orderEntry : order.entrySet()) {
-            String instrumentTypeInOrder = orderEntry.getKey();
-            Integer numberOfInstrumentsInOrder = orderEntry.getValue();
-            int numberOfInstrumentsRemoved = 0;
+            Instrument instrumentType = order.getKey();
 
-            for (int i = 0; i < instruments.size(); i++) {
-                if (instruments.get(i).getType().equals(instrumentTypeInOrder) &&
-                        numberOfInstrumentsInOrder > numberOfInstrumentsRemoved) {
-                    try {
-                        instruments.remove(i);
-                        numberOfInstrumentsRemoved++;
-                    } catch (IllegalStateException e) {
-                        System.out.println("Error: in store doesn't exist such amount og needed instruments.");
-                    }
-                    numberOfInstrumentsRemoved++;
-                } else if (!instruments.get(i).getType().equals(instrumentTypeInOrder)) {
-                    try {
-                        throw new IllegalInstrumentException();
-                    } catch (IllegalInstrumentException e) {
-                        System.out.println("Error: Incorrect type of instrument in order.");
-                    }
+            int instrumentsToRemove = order.getValue().size();
+            int instrumentsRemoved = 0;
+
+            for (Instrument instrument : store) {
+                if (instrument.getType().equals(instrumentType.getType()) && instrumentsRemoved < instrumentsToRemove) {
+                    instrumentsRemoved++;
+                    System.out.println(instrumentType.getType() + " - ready for sending.");
+                }
+            }
+            if (instrumentsRemoved < instrumentsToRemove) {
+                try {
+                    throw new IllegalArgumentException();
+                } catch (IllegalArgumentException e) {
+                    System.out.println("\nError: store doesn't have enough " +
+                            instrumentType.getType() + "s");
+                    break;
                 }
             }
         }
-        return instruments;
+    }
+
+    private static void fillStore() {
+        for (int i = 0; i < PIANOS; i++) {
+            Store.store.add(new Piano());
+        }
+
+        for (int i = 0; i < GUITARS; i++) {
+            Store.store.add(new Guitar());
+        }
+
+        for (int i = 0; i < TRUMPETS; i++) {
+            Store.store.add(new Trumpet());
+        }
+    }
+
+    public void printStore() {
+        System.out.print("Store has such instruments: ");
+        for (Instrument st : store) {
+            System.out.print(st + " ");
+        }
     }
 }
 
