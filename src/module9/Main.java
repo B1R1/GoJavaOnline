@@ -1,4 +1,4 @@
-package module_9;
+package module9;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,21 +17,17 @@ public class Main {
         List<String> decodedList = new ArrayList<>();
 
         ListCreator.createList(list);
+        System.out.println("Original lines are: " + list);
 
         CaesarCipher cipher = new CaesarCipher();
-        cipher.encode(list, encodedList);
-        print(encodedList);
-
-        System.out.println();
-
-        cipher.decode(encodedList, decodedList);
-        print(decodedList);
-    }
-
-    private static void print(List<String> list) {
-        for (String line : list) {
-            System.out.println(line);
+        for (String index : list) {
+            encodedList.add(cipher.encode(index));
         }
+        System.out.println("Encoded lines are: " + encodedList);
+
+        for (String index : encodedList) {
+            decodedList.add(cipher.decode(index));
+        }
+        System.out.println("Decoded lines are: " + decodedList);
     }
 }
-

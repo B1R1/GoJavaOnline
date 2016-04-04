@@ -1,9 +1,11 @@
-package module_9;
+package module9;
 
-import module_6.geometric_shapes.*;
+import module6.geometric_shapes.*;
+
 import java.util.List;
 
 class ListCreator {
+
     private static final int CIRCLE_RADIUS = 2;
     private static final int TRIANGLE_HEIGHT = 5;
     private static final int TRIANGLE_BASE = 94;
