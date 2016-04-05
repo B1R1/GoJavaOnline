@@ -16,18 +16,35 @@ public class Main {
         List<String> encodedList = new ArrayList<>();
         List<String> decodedList = new ArrayList<>();
 
-        ListCreator.createList(list);
-        System.out.println("Original lines are: " + list);
+        SampleDataListCreator.createList(list);
+
+        if (haveMessage(list)) {
+            System.out.println("Original lines are: " + list);
+        }
 
         CaesarCipher cipher = new CaesarCipher();
-        for (String index : list) {
-            encodedList.add(cipher.encode(index));
-        }
-        System.out.println("Encoded lines are: " + encodedList);
 
-        for (String index : encodedList) {
-            decodedList.add(cipher.decode(index));
+        if (haveMessage(list)) {
+            for (String index : list) {
+                encodedList.add(cipher.encode(index));
+            }
+            System.out.println("Encoded lines are: " + encodedList);
         }
-        System.out.println("Decoded lines are: " + decodedList);
+
+        if (haveMessage(encodedList)) {
+            for (String index : encodedList) {
+                decodedList.add(cipher.decode(index));
+            }
+            System.out.println("Decoded lines are: " + decodedList);
+        }
+    }
+
+    private static boolean haveMessage (List<String> list) {
+        boolean haveMessage = true;
+        if (list.size() == 0) {
+            haveMessage = false;
+            System.out.println("Haven't any lines for processing.");
+        }
+        return haveMessage;
     }
 }

@@ -1,10 +1,12 @@
 package module9;
 
-import module6.geometric_shapes.*;
+import module6.geometric_shapes.Circle;
+import module6.geometric_shapes.Rectangle;
+import module6.geometric_shapes.Triangle;
 
 import java.util.List;
 
-class ListCreator {
+class SampleDataListCreator {
 
     private static final int CIRCLE_RADIUS = 2;
     private static final int TRIANGLE_HEIGHT = 5;
