@@ -1,4 +1,4 @@
-package codegym;
+package codegym.practice1;
 
 
 public class FindMaxNumber {

@@ -1,4 +1,4 @@
-package codegym;
+package codegym.practice1;
 
 import org.junit.Test;
 
@@ -9,16 +9,9 @@ public class FirstOddNumberTest {
 
     @Test
     public void testFind() throws Exception {
-        int[]i = { 0, 3, };
-//        int [] i = new int[3];
-//        i[1] = 3;
-        int expected = 0;
-
+        int[]i = {2, 4, 4, 6, 8, 9, 4, 1, };
+        int expected = 5;
         int result = firstOddNumber.find(i);
-        for (int d : i) {
-            System.out.println(d);
-        }
-
         assertEquals (expected, result);
 
     }
