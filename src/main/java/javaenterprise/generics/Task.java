@@ -1,6 +1,6 @@
 package javaenterprise.generics;
 
-public interface Task {
+public interface Task<Object> {
     // Метода запускает таск на выполнение
     void execute();
 
