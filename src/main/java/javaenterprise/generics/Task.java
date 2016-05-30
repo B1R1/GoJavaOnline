@@ -1,9 +1,8 @@
 package javaenterprise.generics;
 
-public interface Task<Object> {
-    // Метода запускает таск на выполнение
+public interface Task<T> {
+
     void execute();
 
-    // Возвращает результат выполнения
     Object getResult();
 }

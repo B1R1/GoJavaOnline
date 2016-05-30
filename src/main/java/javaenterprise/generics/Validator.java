@@ -1,6 +1,6 @@
 package javaenterprise.generics;
 
-public interface Validator<Object> {
+public interface Validator<T> {
 
     boolean isValid(Object result);
 }
