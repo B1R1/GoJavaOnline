@@ -1,4 +1,4 @@
-package javaenterprise.generics.framework;
+package javaenterprise.generics.homework.framework;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package javaenterprise.generics.temp;
+package javaenterprise.genericstemp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
