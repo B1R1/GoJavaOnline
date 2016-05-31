@@ -1,0 +1,6 @@
+package javaenterprise.generics.framework;
+
+public interface Validator<Object> {
+
+    boolean isValid(Object result);
+}

@@ -1,8 +1,8 @@
-package javaenterprise.generics;
+package javaenterprise.generics.framework;
 
 import java.util.List;
 
-public interface Executor<T> {
+public interface Executor<Object> {
     // Добавить таск на выполнение. Результат таска будет доступен через метод getValidResults().
     // Бросает Эксепшн если уже был вызван метод execute()
     void addTask(Task task);
@@ -17,10 +17,10 @@ public interface Executor<T> {
     void execute();
 
     // Получить валидные результаты. Бросает Эксепшн если не был вызван метод execute()
-    List<T> getValidResults();
+    List<Object> getValidResults();
 
     // Получить невалидные результаты. Бросает Эксепшн если не был вызван метод execute()
-    List<T> getInvalidResults();
+    List<Object> getInvalidResults();
 
 }
 
