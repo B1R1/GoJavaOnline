@@ -1,8 +1,8 @@
 package javaenterprise.generics.homework.api;
 
-public interface Task<Object> {
+public interface Task<T> {
 
     void execute();
 
-    Object getResult();
+    T getResult();
 }

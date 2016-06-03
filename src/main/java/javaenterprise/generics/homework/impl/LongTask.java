@@ -2,7 +2,7 @@ package javaenterprise.generics.homework.impl;
 
 import javaenterprise.generics.homework.api.Task;
 
-public class LongTask<Long> implements Task<Long> {
+public class LongTask<Number> implements Task<Number> {
 
     public LongTask(long value) {
     }
@@ -13,7 +13,7 @@ public class LongTask<Long> implements Task<Long> {
     }
 
     @Override
-    public Long getResult() {
+    public Number getResult() {
         return null;
     }
 }

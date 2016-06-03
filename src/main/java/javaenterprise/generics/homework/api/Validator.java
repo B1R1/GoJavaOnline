@@ -1,6 +1,6 @@
 package javaenterprise.generics.homework.api;
 
-public interface Validator<Object> {
+public interface Validator<T> {
 
-    boolean isValid(Object result);
+    boolean isValid(T result);
 }
