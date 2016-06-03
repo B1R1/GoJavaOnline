@@ -1,6 +1,6 @@
-package javaenterprise.generics.homework.realisation;
+package javaenterprise.generics.homework.impl;
 
-import javaenterprise.generics.homework.framework.Validator;
+import javaenterprise.generics.homework.api.Validator;
 
 public class NumberValidator<Number> implements Validator<Number> {
 

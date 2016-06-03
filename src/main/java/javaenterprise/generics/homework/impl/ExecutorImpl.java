@@ -1,13 +1,13 @@
-package javaenterprise.generics.homework.realisation;
+package javaenterprise.generics.homework.impl;
 
-import javaenterprise.generics.homework.framework.Executor;
-import javaenterprise.generics.homework.framework.Task;
-import javaenterprise.generics.homework.framework.Validator;
+import javaenterprise.generics.homework.api.Executor;
+import javaenterprise.generics.homework.api.Task;
+import javaenterprise.generics.homework.api.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExecutorImpl<Number> implements Executor<Number> {
+public class ExecutorImpl<T> implements Executor<Task> {
     List<Task> tasks = new ArrayList<>();
     List<Task> validTasks = new ArrayList<>();
     List<Task> invalidTasks = new ArrayList<>();
@@ -31,7 +31,7 @@ public class ExecutorImpl<Number> implements Executor<Number> {
     }
 
     @Override
-    public List getValidResults() {
+    public List<Task> getValidResults() {
        List<Task> results = new ArrayList<>();
        Validator v = new NumberValidator<>();
        for (Task t : tasks) {
@@ -43,7 +43,7 @@ public class ExecutorImpl<Number> implements Executor<Number> {
     }
 
     @Override
-    public List getInvalidResults() {
+    public List<Task> getInvalidResults() {
         List<Task> results = new ArrayList<>();
         Validator v = new NumberValidator<>();
         for (Task t : tasks) {

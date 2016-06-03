@@ -1,8 +1,9 @@
-package javaenterprise.generics.homework.realisation;
+package javaenterprise.generics.homework.impl;
 
-import javaenterprise.generics.homework.framework.Task;
+import javaenterprise.generics.homework.api.Task;
 
-public class LongTask<Number> implements Task<Long> {
+public class LongTask<Long> implements Task<Long> {
+
     public LongTask(long value) {
     }
 

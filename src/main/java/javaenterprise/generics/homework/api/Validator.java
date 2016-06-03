@@ -1,4 +1,4 @@
-package javaenterprise.generics.homework.framework;
+package javaenterprise.generics.homework.api;
 
 public interface Validator<Object> {
 
