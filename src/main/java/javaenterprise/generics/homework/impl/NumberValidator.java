@@ -2,7 +2,7 @@ package javaenterprise.generics.homework.impl;
 
 import javaenterprise.generics.homework.api.Validator;
 
-public class NumberValidator<Number> implements Validator<Number> {
+public class NumberValidator implements Validator<Number> {
 
     @Override
     public boolean isValid(Number result) {
